@@ -3,7 +3,20 @@
 import socket
 import threading
 import ssl
+#servidor de chat
+def client_thread(client_socket, clients, usernames):
+    """
+    Función que maneja la comunicación con un cliente en el chat.
 
+    Parameters:
+    client_socket (socket): El socket del cliente.
+    clients (list): Lista de sockets de los clientes conectados.
+    usernames (dict): Diccionario que mapea los sockets de los clientes con sus nombres de usuario.
+
+    Returns:
+    None
+    """
+    # Resto del código de la función...
 def client_thread(client_socket, clients, usernames):
     #print(f"[+] Estamos en client_thread")
     username = client_socket.recv(1024).decode()
@@ -40,7 +53,9 @@ def client_thread(client_socket, clients, usernames):
 
 
 def server_program():
-
+    """
+    Función que inicia el servidor y se encarga de aceptar conexiones entrantes de clientes.
+    """
     host = 'localhost'
     port = 12345
 
