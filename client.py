@@ -41,7 +41,7 @@ def exit_request(client_socket, username, window):
     client_socket.close()
     window.quit()
     window.destroy()
-    
+ #funcion clinete program   
 def client_program():
     host = 'localhost'
     port = 12345
