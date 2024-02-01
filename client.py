@@ -17,7 +17,7 @@ def send_message(client_socket, username, text_widget, entry_widget):
     text_widget.insert(END, f"{username} > {message}\n")
     text_widget.configure(state='disabled')
 
-
+#hola que hace
 def receive_message(client_socket, text_widget):
     while True:
         try:
